@@ -1,26 +1,29 @@
 <ion-header>
     <ion-toolbar color="danger">
       <ion-img src="..\assets\icon\ajcinemas.png"></ion-img>
-    </ion-toolbar>
-  </ion-header>
+
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+</ion-toolbar>
 
   <ion-content padding>
-   
+
     <ion-grid>
       <ion-row>
         <ion-col text-center>
-          Welcome to Dashboard!
+          Your Logged In as : {{userEmail}}
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col text-center>
-          Your Registered EmailID : {{userEmail}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>  
-    
-    
+    </ion-grid> 
+
+    <ion-text color="secondary">
+      <h3>Welcome to a new way of cinema. Not only do we show new movies we also show some classic movies.</h3>
+    </ion-text>
+
   </ion-content>
+
   <ion-footer (click)="logout()">
     <ion-toolbar color="secondary">
       <ion-title>Log out</ion-title>
