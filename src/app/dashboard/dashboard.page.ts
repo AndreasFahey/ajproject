@@ -9,7 +9,6 @@ import { AuthenticateService } from '../services/authentication.service';
 })
 export class DashboardPage implements OnInit {
  
- 
   userEmail: string;
  
   constructor(
