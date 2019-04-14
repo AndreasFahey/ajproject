@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'booktickets', loadChildren: './booktickets/booktickets.module#BookticketsPageModule' },
   { path: 'classic', loadChildren: './classic/classic.module#ClassicPageModule' },
   { path: 'latest', loadChildren: './latest/latest.module#LatestPageModule' },
+  { path: 'upcoming', loadChildren: './upcoming/upcoming.module#UpcomingPageModule' },
 
  
 ];
