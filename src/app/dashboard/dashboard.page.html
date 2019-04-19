@@ -7,15 +7,22 @@
 
 
   <ion-content>
+    
+    <ion-slides pager>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col text-center>
-          Your Logged In as : {{userEmail}}
-        </ion-col>
-      </ion-row>
-    </ion-grid> 
-
+        <ion-slide style="background-image: url(../assets/icon/avengerseg.jpg)">
+          <h1>Avengers EndGame Comes To Cinemas April 26th!</h1>
+        </ion-slide>
+    
+        <ion-slide style="background-image: url(../assets/icon/starwarsros.jpg)">
+          <h1>The Saga Comes To An End This Christmas!</h1>
+        </ion-slide>
+    
+        <ion-slide style="background-image: url(../assets/icon/wolf.jpg)">
+          <h1>Watch Classic Movies Here On the Big Screen Again at AJCinemas!</h1>
+        </ion-slide>
+    
+    </ion-slides>
   
         <ion-button (click)="timetable()" expand="block">Movie Timetable</ion-button>
         <ion-button (click)="booktickets()" expand="block">Book Tickets</ion-button>
@@ -24,6 +31,12 @@
         <ion-button (click)="upcoming()" expand="block">Upcoming Movies</ion-button>
         <ion-button (click)="logout()" expand="block">Log Out</ion-button>
 
-  
+        <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                Your Logged In as : {{userEmail}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
   </ion-content>
