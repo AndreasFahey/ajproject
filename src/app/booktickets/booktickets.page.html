@@ -6,5 +6,16 @@
 </ion-header>
 
 <ion-content>
+    <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-input [(ngModel)]="booking.Morning" placeholder="Enter the time of the viewing" type="number"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label>Afternoon</ion-label>
+        <ion-input [(ngModel)]="booking.Afternoon"></ion-input>
+    </ion-item>
+    {{booking | json}}
+    <button ion-button block clear>Book Now!</button>
 
 </ion-content>
