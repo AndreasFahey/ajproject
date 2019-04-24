@@ -29,9 +29,11 @@ firebase.initializeApp(environment.firebase);
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+
     BrowserModule,
     CommonModule, 
     IonicModule.forRoot(),
+    IonicModule ,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, 
