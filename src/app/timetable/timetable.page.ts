@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-timetable',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimetablePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController,
+    private router: Router
+  ) { }
+
+  dashboard(){
+    this.router.navigateByUrl('/dashboard');
+  }
+
+  booktickets(){
+    this.router.navigateByUrl('/booktickets');
+  }
 
   ngOnInit() {
   }
