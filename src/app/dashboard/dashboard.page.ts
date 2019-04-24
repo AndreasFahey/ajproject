@@ -27,6 +27,10 @@ export class DashboardPage implements OnInit {
     this.router.navigateByUrl('/booktickets');
   }
 
+  bookedseats(){
+    this.router.navigateByUrl('/bookedseats');
+  }
+
   classic(){
     this.router.navigateByUrl('/classic');
   }

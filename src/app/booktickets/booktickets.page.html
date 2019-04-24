@@ -15,6 +15,11 @@
         <ion-label>Time :</ion-label>
         <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
     </ion-item>
+
+    <ion-item>
+        <ion-label>Seat No :</ion-label>
+        <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
+    </ion-item>
     {{booking | json}}
     <button ion-button block clear (click)="addBooking(booking)">Book Now!</button>
 

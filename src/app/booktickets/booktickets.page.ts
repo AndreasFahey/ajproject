@@ -12,7 +12,8 @@ import { BookingListService } from 'src/services/booking-List/booking-list.servi
 export class BookticketsPage implements OnInit {
   booking: Booking ={
     Movie: '',
-    Time: ''
+    Time: '',
+    Seat: 0
   };
 
   constructor(private Booking: BookingListService) { }

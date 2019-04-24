@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'classic', loadChildren: './classic/classic.module#ClassicPageModule' },
   { path: 'latest', loadChildren: './latest/latest.module#LatestPageModule' },
   { path: 'upcoming', loadChildren: './upcoming/upcoming.module#UpcomingPageModule' },
+  { path: 'bookedseats', loadChildren: './bookedseats/bookedseats.module#BookedseatsPageModule' },
 
  
 ];
