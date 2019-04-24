@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Booking } from 'src/Models/booking/booking.model';
 
+
 @Component({
   selector: 'app-booktickets',
   templateUrl: './booktickets.page.html',
@@ -8,13 +9,17 @@ import { Booking } from 'src/Models/booking/booking.model';
 })
 export class BookticketsPage implements OnInit {
   booking: Booking ={
-    Morning: '',
-    Afternoon: ''
+    Movie: '',
+    Time: ''
   };
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  
+
+  
 
 }

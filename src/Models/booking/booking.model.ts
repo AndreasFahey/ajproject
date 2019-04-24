@@ -1,5 +1,5 @@
 export interface Booking{
     key?: String;
-    Morning: String;
-    Afternoon: String;
+    Movie: String;
+    Time: String;
 }
