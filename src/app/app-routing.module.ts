@@ -8,7 +8,12 @@ const routes: Routes = [
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
   { path: 'idealist', loadChildren: './pages/idea-list/idea-list.module#IdeaListPageModule' },
   { path: 'idea', loadChildren: './pages/idea-details/idea-details.module#IdeaDetailsPageModule' },
-  { path: 'idea/:id', loadChildren: './pages/idea-details/idea-details.module#IdeaDetailsPageModule' },
+  { path: 'idea/:id', loadChildren: './pages/idea-details/idea-details.module#IdeaDetailsPageModule' },  { path: 'timetable', loadChildren: './timetable/timetable.module#TimetablePageModule' },
+  { path: 'booktickets', loadChildren: './booktickets/booktickets.module#BookticketsPageModule' },
+  { path: 'classic', loadChildren: './classic/classic.module#ClassicPageModule' },
+  { path: 'latest', loadChildren: './latest/latest.module#LatestPageModule' },
+  { path: 'upcoming', loadChildren: './upcoming/upcoming.module#UpcomingPageModule' },
+
  
 ];
 

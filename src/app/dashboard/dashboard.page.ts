@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authentication.service';
+import { Router } from '@angular/router';
  
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +10,34 @@ import { AuthenticateService } from '../services/authentication.service';
 })
 export class DashboardPage implements OnInit {
  
- 
   userEmail: string;
- 
+  
+
   constructor(
     private navCtrl: NavController,
-    private authService: AuthenticateService
+    private authService: AuthenticateService,
+    private router: Router
   ) {}
+
+  timetable(){
+    this.router.navigateByUrl('/timetable');
+  }
+
+  booktickets(){
+    this.router.navigateByUrl('/booktickets');
+  }
+
+  classic(){
+    this.router.navigateByUrl('/classic');
+  }
+
+  latest(){
+    this.router.navigateByUrl('/latest');
+  }
+
+  upcoming(){
+    this.router.navigateByUrl('/upcoming');
+  }
  
   ngOnInit(){
     
