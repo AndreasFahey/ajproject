@@ -16,6 +16,10 @@ import { AuthenticateService } from './services/authentication.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BookingListService } from 'src/services/booking-List/booking-list.service';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 
 firebase.initializeApp(environment.firebase);
 
@@ -28,6 +32,7 @@ firebase.initializeApp(environment.firebase);
     IonicModule.forRoot(),
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule, 
     AngularFirestoreModule,
     AngularFireAuthModule,
     AppRoutingModule],
@@ -36,7 +41,8 @@ firebase.initializeApp(environment.firebase);
     SplashScreen,
     AuthenticateService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: FirestoreSettingsToken, useValue: {} }
+    { provide: FirestoreSettingsToken, useValue: {} },
+    BookingListService
   ],
   bootstrap: [AppComponent]
 })

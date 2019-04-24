@@ -16,6 +16,6 @@
         <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
     </ion-item>
     {{booking | json}}
-    <button ion-button block clear>Book Now!</button>
+    <button ion-button block clear (click)="addBooking(booking)">Book Now!</button>
 
 </ion-content>
