@@ -2,20 +2,76 @@
 
   <ion-toolbar color="danger">
     <ion-img src="..\assets\icon\ajcinemas.png"></ion-img>
+
+    <ion-icon name="arrow-back" (click)="dashboard()"></ion-icon>
     
     
 </ion-toolbar>
 
 </ion-header>
 
-<br>
-<br>
-
 <ion-content>
-  <ion-img class= "movie1" src="..\assets\icon\capmarvel.jpg"></ion-img>
-  <ion-img class= "movie2" src="..\assets\icon\newhope.jpg"></ion-img>
-  <ion-img class= "movie3" src="..\assets\icon\shazam.jpg"></ion-img>
-  <ion-img class= "movie4" src="..\assets\icon\avatar.jpg"></ion-img>
-  <ion-img class= "movie5" src="..\assets\icon\greta.jpg"></ion-img>
-  <ion-img class= "movie6" src="..\assets\icon\saw.jpg"></ion-img>
+
+    <h1>Movie Timetable</h1>
+
+  <img  src="..\assets\icon\capmarvel.jpg" style="width : 25%; height : 75%">
+  <h3>
+    CAPTAIN MARVEL (PG)
+  </h3>
+  <h4>Brie Larson is Captain Marvel in an all new MCU Adventure.</h4>
+  <h4>Release Date: 08/03/2019 </h4>
+  <h2>Viewing Times: [15:30(3D)]   [17:00]   [19:20(3D)]   [22:15]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br> <br>
+
+  <img  src="..\assets\icon\newhope.jpg" style="width : 25%; height : 75%">
+  <h3>
+    STAR WARS: A NEW HOPE (PG)
+  </h3>
+  <h4>The Saga Begins. Watch Star Wars A new hope on the big screen again in preparation for episode 9.</h4>
+  <h4>Release Date: 26/03/1978 </h4>
+  <h2>Viewing Times: [16:50]   [18:10(3D)]   [20:35]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br> <br>
+
+  <img  src="..\assets\icon\shazam.jpg" style="width : 25%; height : 75%">
+  <h3>
+    SHAZAM (12a)
+  </h3>
+  <h4>A new hero comes to the DCEU. Just say the word ..... </h4>
+  <h4>Release Date: 15/03/2019 </h4>
+  <h2>Viewing Times: [18:05]   [19:45]   [21:25]   [23:05]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br> <br>
+
+  <img  src="..\assets\icon\avatar.jpg" style="width : 25%; height : 75%">
+  <h3>
+    AVATAR (PG)
+  </h3>
+  <h4>The highest grossing movie is back on the big screen with AJCinemas.</h4>
+  <h4>Release Date: 18/12/2009 </h4>
+  <h2>Viewing Times: [14:05]   [15:50(3D)]   [17:30]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br> <br>
+
+  <img  src="..\assets\icon\greta.jpg" style="width : 25%; height : 75%">
+  <h3>
+    GRETA (18+)
+  </h3>
+  <h4>Escape Greta ? Everyone needs a friend. Newest Movie to the Horror Genre</h4>
+  <h4>Release Date: 19/04/2019 </h4>
+  <h2>Viewing Times: [19:05]   [20:10]   [21:45]   [23:45]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br> <br>
+
+  <img  src="..\assets\icon\saw.jpg" style="width : 25%; height : 75%">
+  <h3>
+    SAW (18+)
+  </h3>
+  <h4>Wanna Play A Game ? JigSaw is back on the big screen. How much does life mean to you?</h4>
+  <h4>Release Date: 01/10/2004 </h4>
+  <h2>Viewing Times: [19:40]   [20:30(3D)]   [22:00]   [23:30]</h2>
+  <ion-button color="danger" (click)="booktickets()">Book Tickets</ion-button>
+  <br>
+
 </ion-content>

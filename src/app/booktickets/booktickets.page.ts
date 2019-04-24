@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Booking } from 'src/Models/booking/booking.model';
 import { BookingListService } from 'src/services/booking-List/booking-list.service';
-import { NavController } from 'AJcinemas/node_modules/@ionic/angular/dist/core';
+
 
 
 @Component({
@@ -15,7 +15,7 @@ export class BookticketsPage implements OnInit {
     Time: ''
   };
 
-  constructor(public navCtrl: NavController, private Booking: BookingListService) { }
+  constructor(private Booking: BookingListService) { }
 
   ngOnInit() {
   }

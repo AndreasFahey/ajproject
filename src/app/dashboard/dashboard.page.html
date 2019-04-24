@@ -1,40 +1,40 @@
 <ion-header>
-    <ion-toolbar color="danger">
-      <ion-img src="..\assets\icon\ajcinemas.png"></ion-img>
-      <ion-icon name="log-out" (click)="logout()"></ion-icon>
-  </ion-toolbar>
-    </ion-header>
-     
-    <ion-content>
-      
-      <ion-slides pager>
-  
-          <ion-slide style="background-image: url(../assets/icon/avengerseg.jpg)">
-            <h1>Avengers EndGame Comes To Cinemas April 26th!</h1>
-          </ion-slide>
-      
-          <ion-slide style="background-image: url(../assets/icon/starwarsros.jpg)">
-            <h1>The Saga Comes To An End This Christmas!</h1>
-          </ion-slide>
-      
-          <ion-slide style="background-image: url(../assets/icon/wolf.jpg)">
-            <h1>Watch Classic Movies Here On the Big Screen Again at AJCinemas!</h1>
-          </ion-slide>
-      
-      </ion-slides>
+  <ion-toolbar color="danger">
+    <ion-img src="..\assets\icon\ajcinemas.png"></ion-img>
+    <ion-icon name="log-out" (click)="logout()"></ion-icon>
+</ion-toolbar>
+  </ion-header>
+   
+  <ion-content>
     
-          <ion-button color="danger" (click)="timetable()" expand="block">Movie Timetable</ion-button>
-          <ion-button  color="danger" (click)="booktickets()" expand="block">Book Tickets</ion-button>
-          <ion-button  color="danger" (click)="classic()" expand="block">Classic Movies</ion-button>
-          <ion-button color="danger" (click)="latest()" expand="block">Latest Movies</ion-button>
-          <ion-button color="danger" (click)="upcoming()" expand="block">Upcoming Movies</ion-button>
+    <ion-slides pager>
+
+        <ion-slide style="background-image: url(../assets/icon/avengerseg.jpg)">
+          <h1>Avengers EndGame Comes To Cinemas April 26th!</h1>
+        </ion-slide>
+    
+        <ion-slide style="background-image: url(../assets/icon/starwarsros.jpg)">
+          <h1>The Saga Comes To An End This Christmas!</h1>
+        </ion-slide>
+    
+        <ion-slide style="background-image: url(../assets/icon/wolf.jpg)">
+          <h1>Watch Classic Movies Here On the Big Screen Again at AJCinemas!</h1>
+        </ion-slide>
+    
+    </ion-slides>
   
-          <ion-grid>
-              <ion-row>
-                <ion-col text-center>
-                  Your Logged In as : {{userEmail}}
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-  
-    </ion-content>
+        <ion-button color="danger" (click)="timetable()" expand="block">Movie Timetable</ion-button>
+        <ion-button  color="danger" (click)="booktickets()" expand="block">Book Tickets</ion-button>
+        <ion-button  color="danger" (click)="classic()" expand="block">Classic Movies</ion-button>
+        <ion-button color="danger" (click)="latest()" expand="block">Latest Movies</ion-button>
+        <ion-button color="danger" (click)="upcoming()" expand="block">Upcoming Movies</ion-button>
+
+        <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                Your Logged In as : {{userEmail}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+  </ion-content>
