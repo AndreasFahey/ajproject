@@ -22,6 +22,11 @@ export class ClassicPage implements OnInit {
     this.router.navigateByUrl('/timetable');
   }
 
+  booktickets(){
+    this.router.navigateByUrl('/booktickets');
+  }
+
+
   ngOnInit() {
   }
 

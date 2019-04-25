@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-latest',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController,
+    private router: Router
+  ) { }
+
+  dashboard(){
+    this.router.navigateByUrl('/dashboard');
+  }
+
+  timetable(){
+    this.router.navigateByUrl('/timetable');
+  }
+
+  booktickets(){
+    this.router.navigateByUrl('/booktickets');
+  }
 
   ngOnInit() {
   }

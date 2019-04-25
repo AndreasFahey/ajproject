@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingListService } from 'src/services/booking-List/booking-list.service';
-import { Observable } from 'AJcinemas/node_modules/rxjs';
+import { Observable } from 'node_modules/rxjs';
 import { Booking } from 'src/Models/booking/booking.model';
 import { map } from 'rxjs/operators';
 @Component({
