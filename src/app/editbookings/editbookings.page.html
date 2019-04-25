@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-img src="..\assets\icon\ajcinemas.png"></ion-img>
+        <ion-icon name="arrow-back" (click)="dashboard()"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div text-center>
+        <ion-item>
+            <ion-label>Movie :</ion-label>
+            <ion-input [(ngModel)]="booking.Movie" placeholder="Enter the Movie Name" ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label>Time :</ion-label>
+            <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Seat No :</ion-label>
+            <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
+        </ion-item>
+        <ion-button color="danger" (click)="updateBooking(booking)">Update Booking</ion-button>
+        
+    </div>
+</ion-content>

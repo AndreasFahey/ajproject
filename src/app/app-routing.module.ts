@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'latest', loadChildren: './latest/latest.module#LatestPageModule' },
   { path: 'upcoming', loadChildren: './upcoming/upcoming.module#UpcomingPageModule' },
   { path: 'bookedseats', loadChildren: './bookedseats/bookedseats.module#BookedseatsPageModule' },
+  { path: 'editbookings', loadChildren: './editbookings/editbookings.module#EditbookingsPageModule' },
 
  
 ];

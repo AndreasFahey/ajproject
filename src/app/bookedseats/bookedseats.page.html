@@ -12,7 +12,8 @@
       <ion-list-header>
         Seats Booked!
       </ion-list-header>
-      <ion-item *ngFor="let booking of bookingList$ | async">
+      <ion-item *ngFor="let booking of bookingList$ | async"
+      detail-push navPush="editbookingsPage">
         Seat No.{{booking.Seat}}
         /  Title:{{booking.Movie}}
         /  Time:{{booking.Time}}

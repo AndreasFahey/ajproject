@@ -17,4 +17,13 @@ export class BookingListService{
     addBooking(booking: Booking){
         return this.bookingListRef.push(booking);
     }
+
+    editBooking(booking: Booking){
+        return this.bookingListRef.update(booking.key,booking);
+    }
+
+    deleteBooking(booking: Booking){
+        return this.bookingListRef.remove(booking.key);
+    }
+    
 }

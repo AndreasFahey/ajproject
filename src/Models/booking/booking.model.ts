@@ -1,6 +1,6 @@
 export interface Booking{
-    key?: String;
-    Movie: String;
-    Time: String;
+    key?: string;
+    Movie: string;
+    Time: string;
     Seat: number;
 }
