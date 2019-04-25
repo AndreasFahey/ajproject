@@ -18,10 +18,22 @@
         </ion-item>
 
         <ion-item>
+            <ion-label>Row :</ion-label>
+            <ion-input [(ngModel)]="booking.Row" placeholder="Enter the Row" ></ion-input>
+        </ion-item>
+
+        <ion-item>
             <ion-label>Seat No :</ion-label>
             <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
         </ion-item>
+
         <ion-button color="danger" (click)="addBooking(booking)">Book Now!</ion-button>
+
+        <br> <br>
+
+        <img  src="..\assets\icon\seating.png" style="width : 25%; height : 75%">
+
+        <br> <br>
         
     </div>
 </ion-content>

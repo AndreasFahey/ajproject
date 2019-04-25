@@ -15,6 +15,7 @@ export class BookticketsPage implements OnInit {
   booking: Booking ={
     Movie: '',
     Time: '',
+    Row: '',
     Seat: 0
   };
 

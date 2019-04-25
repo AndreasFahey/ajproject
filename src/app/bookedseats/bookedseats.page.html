@@ -14,7 +14,8 @@
       </ion-list-header>
       <ion-item *ngFor="let booking of bookingList$ | async"
       detail-push navPush="editbookingsPage">
-        Seat No.{{booking.Seat}}
+        Row {{booking.Row}}
+        /  Seat No.{{booking.Seat}}
         /  Title:{{booking.Movie}}
         /  Time:{{booking.Time}}
       </ion-item>
