@@ -10,7 +10,11 @@
     <ion-list-header>
       Seats Booked!
     </ion-list-header>
-    <ion-item *ngFor="let booking of bookingList$ | async">No.{{booking.Seat}}</ion-item>
+    <ion-item *ngFor="let booking of bookingList$ | async">
+      Seat No.{{booking.Seat}}
+      /  Title:{{booking.Movie}}
+      /  Time:{{booking.Time}}
+    </ion-item>
   </ion-list>
  
 </ion-content>
