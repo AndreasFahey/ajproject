@@ -6,20 +6,22 @@
 </ion-header>
 
 <ion-content>
-    <ion-item>
-        <ion-label>Movie :</ion-label>
-        <ion-input [(ngModel)]="booking.Movie" placeholder="Enter the Movie Name" ></ion-input>
-    </ion-item>
-    
-    <ion-item>
-        <ion-label>Time :</ion-label>
-        <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
-    </ion-item>
+    <div text-center>
+        <ion-item>
+            <ion-label>Movie :</ion-label>
+            <ion-input [(ngModel)]="booking.Movie" placeholder="Enter the Movie Name" ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label>Time :</ion-label>
+            <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
+        </ion-item>
 
-    <ion-item>
-        <ion-label>Seat No :</ion-label>
-        <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
-    </ion-item>
-    <button ion-button block clear (click)="addBooking(booking)">Book Now!</button>
-
+        <ion-item>
+            <ion-label>Seat No :</ion-label>
+            <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
+        </ion-item>
+        <ion-button color="danger" (click)="addBooking(booking)">Book Now!</ion-button>
+        
+    </div>
 </ion-content>
