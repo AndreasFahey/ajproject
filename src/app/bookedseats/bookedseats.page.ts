@@ -3,6 +3,7 @@ import { BookingListService } from 'src/services/booking-List/booking-list.servi
 import { Observable } from 'node_modules/rxjs';
 import { Booking } from 'src/Models/booking/booking.model';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-bookedseats',
   templateUrl: './bookedseats.page.html',
@@ -12,7 +13,10 @@ export class BookedseatsPage implements OnInit {
   
   bookingList$: Observable<Booking[]>;
 
-  constructor(private booking: BookingListService) 
+  constructor(
+    private booking: BookingListService,
+    private router: Router
+    ) 
   { 
    this.bookingList$ = this.booking
    .getBookingList()
@@ -24,6 +28,11 @@ export class BookedseatsPage implements OnInit {
         ...c.payload.val(),
       }))));
   }
+
+  dashboard(){
+    this.router.navigateByUrl('/dashboard');
+  }
+
 
   ngOnInit() {
   }

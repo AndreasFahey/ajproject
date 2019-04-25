@@ -28,6 +28,11 @@ export class BookticketsPage implements OnInit {
   ngOnInit() {
   }
 
+  dashboard(){
+    this.router.navigateByUrl('/dashboard');
+  }
+
+
   addBooking(booking : Booking){
     this.Booking.addBooking(booking).then(ref => {
       console.log(ref.key);
