@@ -5,35 +5,124 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <div text-center>
-        <ion-item>
-            <ion-label>Movie :</ion-label>
-            <ion-input [(ngModel)]="booking.Movie" placeholder="Enter the Movie Name" ></ion-input>
-        </ion-item>
-        
-        <ion-item>
-            <ion-label>Time :</ion-label>
-            <ion-input [(ngModel)]="booking.Time" placeholder="Enter the Movie Time" ></ion-input>
-        </ion-item>
+<ion-content padding >
 
-        <ion-item>
-            <ion-label>Row :</ion-label>
-            <ion-input [(ngModel)]="booking.Row" placeholder="Enter the Row" ></ion-input>
-        </ion-item>
+    <ion-grid fixed>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+                <ion-label>Movie :</ion-label>
+                <ion-input [(ngModel)]="bookingMovie" placeholder="Enter the Movie Name" ></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+                <ion-label>Time :</ion-label>
+                <ion-input [(ngModel)]="bookingTime" placeholder="Enter the Movie Time" ></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+                <ion-label>Row :</ion-label>
+                <ion-input [(ngModel)]="bookingRow" placeholder="Enter the Row" ></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+                <ion-label>Seat No :</ion-label>
+                 <ion-input [(ngModel)]="bookingSeat" placeholder="Enter the Seat No." type="Number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center>
+            <ion-button color="danger"  (click)="CreateRecord()" [disabled]="!bookingMovie || !bookingTime || !bookingRow || !bookingSeat">
+              <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+              &nbsp;Book Seat
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-row>
+            <ion-col>
+                <div text-center>
+                    <img  src="..\assets\icon\seating.png" style="width : 25%; height : 75%">
+                </div>
+            </ion-col>
+        </ion-row>
 
-        <ion-item>
-            <ion-label>Seat No :</ion-label>
-            <ion-input [(ngModel)]="booking.Seat" placeholder="Enter the Seat Number" type="Number"></ion-input>
-        </ion-item>
 
-        <ion-button color="danger" (click)="addBooking(booking)">Book Now!</ion-button>
 
-        <br> <br>
+      <ion-card *ngFor="let item of bookings">
+            <span *ngIf="!item.isEdit; else elseBlock">
+              <ion-card-header>
+                <ion-card-title>{{item.Movie}} at {{item.Time}}</ion-card-title>
+                <ion-card-subtitle>Seated: {{item.Row}} {{item.Seat}}</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+         
+                <ion-button shape="round" color="secondary" size="small" (click)="EditRecord(item)">
+                  <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+         
+                </ion-button>
+                <ion-button shape="round" color="danger" size="small" (click)="RemoveRecord(item.id)">
+                  <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+         
+                </ion-button>
+              </ion-card-content>
+            </span>
+            <ng-template #elseBlock>
+              <ion-card-header>
+                <ion-card-title>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                        Edit
+                      </ion-col>
+                      <ion-col>
+                        <ion-button fill="clear" color="medium" size="small" (click)="item.isEdit = false">
+                          Cancel
+                        </ion-button>
+                      </ion-col>
+                      <ion-col>
+                        <ion-button fill="outline" color="success" size="small" (click)="UpdateRecord(item)">
+                          Update
+                        </ion-button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-item>
+                  <ion-label><strong>Movie</strong></ion-label>
+                  <ion-input type="text" [(ngModel)]="item.EditMovie"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Time</strong></ion-label>
+                  <ion-input type="text" [(ngModel)]="item.EditTime"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Row</strong></ion-label>
+                  <ion-input type="text" [(ngModel)]="item.EditRow"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label><strong>Seat No.</strong></ion-label>
+                    <ion-input type="text" [(ngModel)]="item.EditSeat"></ion-input>
+                </ion-item>
+              </ion-card-content>
+            </ng-template>
+          </ion-card>
 
-        <img  src="..\assets\icon\seating.png" style="width : 25%; height : 75%">
 
-        <br> <br>
-        
-    </div>
+
+
+
+
+
+
+
+
+
+
 </ion-content>

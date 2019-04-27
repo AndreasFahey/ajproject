@@ -18,15 +18,7 @@ export class BookedseatsPage implements OnInit {
     private router: Router
     ) 
   { 
-   this.bookingList$ = this.booking
-   .getBookingList()
-   .snapshotChanges()
-   .pipe(
-     map(changes =>
-      changes.map(c => ({
-        key: c.payload.key,
-        ...c.payload.val(),
-      }))));
+   
   }
 
   dashboard(){

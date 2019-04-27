@@ -12,12 +12,13 @@
       <ion-list-header>
         Seats Booked!
       </ion-list-header>
-      <ion-item *ngFor="let booking of bookingList$ | async"
-      detail-push navPush="editbookingsPage">
+      <ion-item *ngFor="let booking of bookingList$ | async">
+
         Row {{booking.Row}}
         /  Seat No.{{booking.Seat}}
         /  Title:{{booking.Movie}}
         /  Time:{{booking.Time}}
+       
       </ion-item>
     </ion-list>
   </div>
